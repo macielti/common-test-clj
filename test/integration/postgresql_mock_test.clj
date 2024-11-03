@@ -1,10 +1,11 @@
 (ns postgresql-mock-test
-  (:require [clojure.test :refer :all]
+  (:require [clojure.test :refer [is testing]]
             [common-test-clj.component.postgresql-mock :as component.postgresql-mock]
             [integrant.core :as ig]
             [java-time.api :as jt]
             [matcher-combinators.test :refer [match?]]
             [pg.core :as pg]
+            [pg.pool]
             [schema.test :as s])
   (:import (org.pg Pool)))
 
