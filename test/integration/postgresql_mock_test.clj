@@ -2,8 +2,8 @@
   (:require [clojure.test :refer :all]
             [common-test-clj.component.postgresql-mock :as component.postgresql-mock]
             [integrant.core :as ig]
-            [matcher-combinators.test :refer [match?]]
             [java-time.api :as jt]
+            [matcher-combinators.test :refer [match?]]
             [pg.core :as pg]
             [schema.test :as s])
   (:import (org.pg Pool)))
