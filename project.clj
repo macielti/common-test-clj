@@ -16,6 +16,9 @@
                  [com.github.igrishaev/pg2-core "0.1.18"]
                  [com.taoensso/timbre "6.6.1"]
                  [prismatic/schema "1.4.1"]
+                 [org.clojure/test.check "1.1.1"]
+                 [clojure.java-time "1.4.2"]
+                 [prismatic/schema-generators "0.1.5"]
                  [integrant "0.11.0"]]
 
   :profiles {:dev {:resource-paths ^:replace ["test/resources"]
@@ -23,7 +26,6 @@
                    :test-paths     ^:replace ["test/unit" "test/integration" "test/helpers"]
 
                    :dependencies   [[hashp "0.2.2"]
-                                    [clojure.java-time "1.4.2"]
                                     [nubank/matcher-combinators "3.9.1"]]
 
                    :injections     [(require 'hashp.core)]
