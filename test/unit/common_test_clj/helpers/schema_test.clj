@@ -1,9 +1,9 @@
 (ns common-test-clj.helpers.schema-test
-  (:require [clojure.test :refer :all]
+  (:require [clojure.test :refer [is testing]]
             [common-test-clj.helpers.schema :as test.helper.schema]
             [java-time.api :as jt]
-            [schema.core :as schema]
             [matcher-combinators.test :refer [match?]]
+            [schema.core :as schema]
             [schema.test :as s])
   (:import (java.time LocalDate LocalDateTime)
            (java.util Date)))
