@@ -10,16 +10,16 @@
   :plugins [[com.github.clojure-lsp/lein-clojure-lsp "1.4.13"]
             [com.github.liquidz/antq "RELEASE"]]
 
-  :dependencies [[org.clojure/clojure "1.11.1"]
+  :dependencies [[org.clojure/clojure "1.12.0"]
                  [com.github.igrishaev/pg2-migration "0.1.20"]
                  [org.testcontainers/postgresql "1.20.3"]
                  [com.github.igrishaev/pg2-core "0.1.20"]
-                 [com.taoensso/timbre "6.6.1"]
                  [prismatic/schema "1.4.1"]
                  [org.clojure/test.check "1.1.1"]
                  [clojure.java-time "1.4.2"]
                  [prismatic/schema-generators "0.1.5"]
-                 [integrant "0.13.1"]]
+                 [integrant "0.13.1"]
+                 [org.clojure/tools.logging "1.3.0"]]
 
   :profiles {:dev {:resource-paths ^:replace ["test/resources"]
 

@@ -1,10 +1,10 @@
 (ns common-test-clj.component.postgresql-mock
-  (:require [integrant.core :as ig]
+  (:require [clojure.tools.logging :as log]
+            [integrant.core :as ig]
             [pg.core :as pg]
             [pg.migration.core :as mig]
             [pg.pool :as pool]
-            [schema.core :as s]
-            [taoensso.timbre :as log])
+            [schema.core :as s])
   (:import (org.testcontainers.containers PostgreSQLContainer)))
 
 (defmethod ig/init-key ::postgresql-mock
