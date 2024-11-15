@@ -1,3 +1,5 @@
+[![Clojars Project](https://img.shields.io/clojars/v/net.clojars.macielti/common-test-clj.svg)](https://clojars.org/net.clojars.macielti/common-test-clj)
+
 # Common Test Clojure
 
 Common utilities for testing Clojure code.

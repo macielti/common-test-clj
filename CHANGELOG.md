@@ -5,6 +5,12 @@ of [keepachangelog.com](http://keepachangelog.com/).
 
 ## Unreleased
 
+## 1.1.1 - 2024-11-15
+
+### Fixed
+
+- Better handling startup time for the PostgreSQL container while attempting to establish a connection.
+
 ## 1.1.0 - 2024-11-07
 
 ### Added

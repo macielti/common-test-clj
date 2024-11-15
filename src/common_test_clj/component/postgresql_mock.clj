@@ -1,11 +1,13 @@
 (ns common-test-clj.component.postgresql-mock
   (:require [clojure.tools.logging :as log]
+            [diehard.core :as dh]
             [integrant.core :as ig]
             [pg.core :as pg]
             [pg.migration.core :as mig]
             [pg.pool :as pool]
             [schema.core :as s])
-  (:import (org.testcontainers.containers PostgreSQLContainer)))
+  (:import (org.pg.error PGError)
+           (org.testcontainers.containers PostgreSQLContainer)))
 
 (defmethod ig/init-key ::postgresql-mock
   [_ _]
@@ -16,7 +18,10 @@
                            :user     (.getUsername postgresql-container)
                            :password (.getPassword postgresql-container)
                            :database (.getDatabaseName postgresql-container)}
-        pool (pool/pool postgresql-config)]
+        pool (dh/with-retry {:retry-on    PGError
+                             :delay-ms    2000
+                             :max-retries 3}
+               (pool/pool postgresql-config))]
     (mig/migrate-all postgresql-config)
     pool))
 
@@ -35,5 +40,8 @@
                            :user     (.getUsername postgresql-container)
                            :password (.getPassword postgresql-container)
                            :database (.getDatabaseName postgresql-container)}]
-    (mig/migrate-all postgresql-config)
+    (dh/with-retry {:retry-on    PGError
+                    :delay-ms    2000
+                    :max-retries 3}
+      (mig/migrate-all postgresql-config))
     (pg/connect postgresql-config)))

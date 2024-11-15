@@ -1,4 +1,4 @@
-(defproject net.clojars.macielti/common-test-clj "1.1.0"
+(defproject net.clojars.macielti/common-test-clj "1.1.1"
 
   :description "Common utilities for testing Clojure code"
 
@@ -14,12 +14,13 @@
                  [com.github.igrishaev/pg2-migration "0.1.20"]
                  [org.testcontainers/postgresql "1.20.3"]
                  [com.github.igrishaev/pg2-core "0.1.20"]
-                 [prismatic/schema "1.4.1"]
+                 [prismatic/schema-generators "0.1.5"]
+                 [org.clojure/tools.logging "1.3.0"]
                  [org.clojure/test.check "1.1.1"]
                  [clojure.java-time "1.4.2"]
-                 [prismatic/schema-generators "0.1.5"]
+                 [prismatic/schema "1.4.1"]
                  [integrant "0.13.1"]
-                 [org.clojure/tools.logging "1.3.0"]]
+                 [diehard "0.11.12"]]
 
   :profiles {:dev {:resource-paths ^:replace ["test/resources"]
 
