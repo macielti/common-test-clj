@@ -2,7 +2,6 @@
   (:require [clojure.tools.logging :as log]
             [diehard.core :as dh]
             [integrant.core :as ig]
-            [pg.core :as pg]
             [pg.migration.core :as mig]
             [pg.pool :as pool]
             [schema.core :as s])
@@ -30,7 +29,7 @@
   (log/info :stopping ::postgresql-mock)
   (pool/close pool))
 
-(s/defn postgresql-conn-mock
+(s/defn postgresql-pool-mock
   "Intended to be used for unit testing"
   []
   (let [postgresql-container (doto (PostgreSQLContainer. "postgres:16-alpine")
@@ -44,4 +43,4 @@
                     :delay-ms    2000
                     :max-retries 3}
       (mig/migrate-all postgresql-config))
-    (pg/connect postgresql-config)))
+    (pool/pool postgresql-config)))

@@ -2,9 +2,9 @@
   (:require [clojure.test :refer [is testing]]
             [common-test-clj.component.postgresql-mock :as component.postgresql-mock]
             [schema.test :as s])
-  (:import (org.pg Connection)))
+  (:import (org.pg Pool)))
 
-(s/deftest postgresql-conn-mock-test
+(s/deftest postgresql-pool-mock-test
   (testing "Creating a mocked PostgreSQL connection"
-    (let [conn (component.postgresql-mock/postgresql-conn-mock)]
-      (is (= (type conn) Connection)))))
+    (let [conn (component.postgresql-mock/postgresql-pool-mock)]
+      (is (= (type conn) Pool)))))
