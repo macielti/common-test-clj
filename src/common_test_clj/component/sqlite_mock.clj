@@ -1,7 +1,7 @@
 (ns common-test-clj.component.sqlite-mock
   (:require [clojure.tools.logging :as log]
-            [migratus.core :as migratus]
             [integrant.core :as ig]
+            [migratus.core :as migratus]
             [schema.core :as s]))
 
 (defmethod ig/init-key ::sqlite-mock
