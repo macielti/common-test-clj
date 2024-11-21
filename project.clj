@@ -1,4 +1,4 @@
-(defproject net.clojars.macielti/common-test-clj "3.1.1"
+(defproject net.clojars.macielti/common-test-clj "3.1.2"
 
   :description "Common utilities for testing Clojure code"
 
@@ -22,8 +22,8 @@
                  [integrant "0.13.1"]
                  [migratus "1.6.3"]
                  [diehard "0.11.12"]
-                 [org.xerial/sqlite-jdbc "3.40.0.0"]
-                 [seancorfield/next.jdbc "1.2.659"]]
+                 [org.xerial/sqlite-jdbc "3.41.2.1"]
+                 [com.github.seancorfield/next.jdbc "1.3.955"]]
 
   :profiles {:dev {:resource-paths ^:replace ["test/resources"]
 
