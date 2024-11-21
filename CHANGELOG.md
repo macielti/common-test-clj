@@ -5,6 +5,12 @@ of [keepachangelog.com](http://keepachangelog.com/).
 
 ## Unreleased
 
+## 3.1.1 - 2024-11-20
+
+### Changed
+
+- Added `schemas` param to sqlite component and unit mock tooling.
+
 ## 2.1.1 - 2024-11-19
 
 ### Added
