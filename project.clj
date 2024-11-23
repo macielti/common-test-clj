@@ -1,4 +1,4 @@
-(defproject net.clojars.macielti/common-test-clj "3.2.2"
+(defproject net.clojars.macielti/common-test-clj "3.2.3"
 
   :description "Common utilities for testing Clojure code"
 

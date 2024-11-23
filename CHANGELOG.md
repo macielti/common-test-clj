@@ -5,6 +5,12 @@ of [keepachangelog.com](http://keepachangelog.com/).
 
 ## Unreleased
 
+## 3.2.3 - 2024-11-23
+
+### Fixed
+
+- Fixed leaf generator for `LocalDateWire`.
+
 ## 3.2.2 - 2024-11-23
 
 ### Added
