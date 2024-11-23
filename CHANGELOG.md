@@ -5,6 +5,12 @@ of [keepachangelog.com](http://keepachangelog.com/).
 
 ## Unreleased
 
+## 3.2.2 - 2024-11-23
+
+### Added
+
+- Added generators for `LocalDateWire`, `LocalDateTimeWire`, and `UuidWire`.
+
 ## 3.1.2 - 2024-11-20
 
 ### Added

@@ -1,4 +1,4 @@
-(defproject net.clojars.macielti/common-test-clj "3.1.2"
+(defproject net.clojars.macielti/common-test-clj "3.2.2"
 
   :description "Common utilities for testing Clojure code"
 
@@ -7,17 +7,18 @@
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
             :url  "https://www.eclipse.org/legal/epl-2.0/"}
 
-  :plugins [[com.github.clojure-lsp/lein-clojure-lsp "1.4.13"]
+  :plugins [[com.github.clojure-lsp/lein-clojure-lsp "1.4.15"]
             [com.github.liquidz/antq "RELEASE"]]
 
   :dependencies [[org.clojure/clojure "1.12.0"]
-                 [com.github.igrishaev/pg2-migration "0.1.20"]
-                 [org.testcontainers/postgresql "1.20.3"]
-                 [com.github.igrishaev/pg2-core "0.1.20"]
+                 [net.clojars.macielti/common-clj "41.73.72"]
+                 [com.github.igrishaev/pg2-migration "0.1.21"]
+                 [org.testcontainers/postgresql "1.20.4"]
+                 [com.github.igrishaev/pg2-core "0.1.21"]
                  [prismatic/schema-generators "0.1.5"]
                  [org.clojure/tools.logging "1.3.0"]
                  [org.clojure/test.check "1.1.1"]
-                 [clojure.java-time "1.4.2"]
+                 [clojure.java-time "1.4.3"]
                  [prismatic/schema "1.4.1"]
                  [integrant "0.13.1"]
                  [migratus "1.6.3"]
