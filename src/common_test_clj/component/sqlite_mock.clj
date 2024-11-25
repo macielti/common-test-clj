@@ -15,7 +15,7 @@
         (try (jdbc/execute! conn [schema])
              (catch Exception e
                (log/error (ex-message e))))))
-    sqlite))
+    (jdbc/get-connection sqlite)))
 
 (defmethod ig/halt-key! ::sqlite-mock
   [_ _]
@@ -32,4 +32,4 @@
         (try (jdbc/execute! conn [schema])
              (catch Exception e
                (log/error (ex-message e))))))
-    sqlite))
+    (jdbc/get-connection sqlite)))

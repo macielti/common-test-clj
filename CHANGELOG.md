@@ -5,6 +5,12 @@ of [keepachangelog.com](http://keepachangelog.com/).
 
 ## Unreleased
 
+## 4.2.3 - 2024-11-25
+
+### Changed
+
+- Use database connection instead of database spec for sqlite.
+
 ## 3.2.3 - 2024-11-23
 
 ### Fixed
