@@ -1,4 +1,4 @@
-(defproject net.clojars.macielti/common-test-clj "4.2.3"
+(defproject net.clojars.macielti/common-test-clj "5.2.3"
 
   :description "Common utilities for testing Clojure code"
 
@@ -12,7 +12,6 @@
 
   :dependencies [[org.clojure/clojure "1.12.0"]
                  [net.clojars.macielti/common-clj "41.73.72"]
-                 [com.github.igrishaev/pg2-migration "0.1.21"]
                  [org.testcontainers/postgresql "1.20.4"]
                  [com.github.igrishaev/pg2-core "0.1.21"]
                  [prismatic/schema-generators "0.1.5"]

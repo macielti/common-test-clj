@@ -5,6 +5,12 @@ of [keepachangelog.com](http://keepachangelog.com/).
 
 ## Unreleased
 
+## 5.2.3 - 2024-12-03
+
+### Changed
+
+- Remove dependencies to `pg.migration`.
+
 ## 4.2.3 - 2024-11-25
 
 ### Changed
