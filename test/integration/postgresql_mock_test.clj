@@ -9,7 +9,7 @@
             [schema.test :as s])
   (:import (org.pg Pool)))
 
-(def config {::component.postgresql-mock/postgresql-mock {}})
+(def config {::component.postgresql-mock/postgresql-mock {:schemas ["CREATE TABLE IF NOT EXISTS pessoa (apelido TEXT UNIQUE NOT NULL PRIMARY KEY, nome TEXT NOT NULL, nascimento DATE NOT NULL);"]}})
 
 (s/deftest postgresql-mock-component-test
   (let [system (ig/init config)

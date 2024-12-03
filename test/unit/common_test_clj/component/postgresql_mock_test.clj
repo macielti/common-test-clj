@@ -6,5 +6,5 @@
 
 (s/deftest postgresql-pool-mock-test
   (testing "Creating a mocked PostgreSQL connection"
-    (let [conn (component.postgresql-mock/postgresql-pool-mock)]
+    (let [conn (component.postgresql-mock/postgresql-pool-mock [])]
       (is (= (type conn) Pool)))))
