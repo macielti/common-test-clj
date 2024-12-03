@@ -11,7 +11,7 @@
             [com.github.liquidz/antq "RELEASE"]]
 
   :dependencies [[org.clojure/clojure "1.12.0"]
-                 [net.clojars.macielti/common-clj "41.73.72"]
+                 [net.clojars.macielti/common-clj "41.74.74"]
                  [org.testcontainers/postgresql "1.20.4"]
                  [com.github.igrishaev/pg2-core "0.1.21"]
                  [prismatic/schema-generators "0.1.5"]
@@ -22,6 +22,7 @@
                  [integrant "0.13.1"]
                  [migratus "1.6.3"]
                  [diehard "0.11.12"]
+
                  [org.xerial/sqlite-jdbc "3.41.2.1"]
                  [com.github.seancorfield/next.jdbc "1.3.955"]]
 
