@@ -5,7 +5,6 @@
             [java-time.api :as jt]
             [matcher-combinators.test :refer [match?]]
             [pg.core :as pg]
-            [pg.pool]
             [schema.test :as s])
   (:import (org.pg Pool)))
 
@@ -24,7 +23,7 @@
       (is (= [{:apelido    "brunão"
                :nascimento now
                :nome       "nascimento"}]
-             (pg.pool/with-connection [conn pool]
+             (pg.core/with-connection [conn pool]
                (pg/execute conn
                            "INSERT INTO pessoa (apelido, nome, nascimento) VALUES ($1, $2, $3)
                             returning *"

@@ -3,7 +3,6 @@
             [diehard.core :as dh]
             [integrant.core :as ig]
             [pg.core :as pg]
-            [pg.pool :as pool]
             [schema.core :as s])
   (:import (org.pg.error PGError)
            (org.testcontainers.containers PostgreSQLContainer)))
@@ -20,15 +19,15 @@
     (dh/with-retry {:retry-on    PGError
                     :delay-ms    2000
                     :max-retries 3}
-      (pool/with-connection [database-conn (pool/pool postgresql-config)]
+      (pg/with-connection [database-conn (pg/pool postgresql-config)]
         (doseq [schema schemas]
           (pg/execute database-conn schema))))
-    (pool/pool postgresql-config)))
+    (pg/pool postgresql-config)))
 
 (defmethod ig/halt-key! ::postgresql-mock
   [_ pool]
   (log/info :stopping ::postgresql-mock)
-  (pool/close pool))
+  (pg/close pool))
 
 (s/defn postgresql-pool-mock
   "Intended to be used for unit testing"
@@ -43,7 +42,7 @@
     (dh/with-retry {:retry-on    PGError
                     :delay-ms    2000
                     :max-retries 3}
-      (pool/with-connection [database-conn (pool/pool postgresql-config)]
+      (pg/with-connection [database-conn (pg/pool postgresql-config)]
         (doseq [schema schemas]
           (pg/execute database-conn schema))))
-    (pool/pool postgresql-config)))
+    (pg/pool postgresql-config)))
