@@ -1,4 +1,4 @@
-(defproject net.clojars.macielti/common-test-clj "5.2.4"
+(defproject net.clojars.macielti/common-test-clj "6.2.4"
 
   :description "Common utilities for testing Clojure code"
 
@@ -7,23 +7,24 @@
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
             :url  "https://www.eclipse.org/legal/epl-2.0/"}
 
-  :dependencies [[org.clojure/clojure "1.12.0"]
-                 [net.clojars.macielti/common-clj "43.74.74"]
-                 [org.testcontainers/postgresql "1.20.4"]
-                 [com.github.igrishaev/pg2-core "0.1.33"]
+  :dependencies [[org.clojure/clojure "1.12.4"]
+                 [net.clojars.macielti/common-clj "43.74.77"]
+                 [org.testcontainers/postgresql "1.21.4"]
+                 [com.github.igrishaev/pg2-core "0.1.41"]
                  [prismatic/schema-generators "0.1.5"]
-                 [org.clojure/tools.logging "1.3.0"]
-                 [org.clojure/test.check "1.1.1"]
+                 [org.clojure/tools.logging "1.3.1"]
+                 [org.clojure/test.check "1.1.3"]
                  [clojure.java-time "1.4.3"]
                  [prismatic/schema "1.4.1"]
-                 [integrant "0.13.1"]
-                 [migratus "1.6.3"]
-                 [diehard "0.11.12"]
+                 [integrant "1.0.1"]
+                 [migratus "1.6.4"]
+                 [diehard "0.12.0"]
+                 [com.github.igrishaev/pg2-migration "0.1.41"]
 
-                 [org.xerial/sqlite-jdbc "3.41.2.1"]
-                 [com.github.seancorfield/next.jdbc "1.3.994"]]
+                 [org.xerial/sqlite-jdbc "3.51.1.0"]
+                 [com.github.seancorfield/next.jdbc "1.3.1086"]]
 
-  :profiles {:dev {:plugins        [[com.github.clojure-lsp/lein-clojure-lsp "1.4.16"]
+  :profiles {:dev {:plugins        [[com.github.clojure-lsp/lein-clojure-lsp "2.0.13"]
                                     [com.github.liquidz/antq "RELEASE"]]
 
                    :resource-paths ^:replace ["test/resources"]
@@ -31,7 +32,7 @@
                    :test-paths     ^:replace ["test/unit" "test/integration" "test/helpers"]
 
                    :dependencies   [[hashp "0.2.2"]
-                                    [nubank/matcher-combinators "3.9.1"]]
+                                    [nubank/matcher-combinators "3.9.2"]]
 
                    :injections     [(require 'hashp.core)]
 
