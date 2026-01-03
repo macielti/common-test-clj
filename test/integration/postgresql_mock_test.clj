@@ -8,7 +8,8 @@
             [schema.test :as s])
   (:import (org.pg Pool)))
 
-(def config {::component.postgresql-mock/postgresql-mock {:schemas ["CREATE TABLE IF NOT EXISTS pessoa (apelido TEXT UNIQUE NOT NULL PRIMARY KEY, nome TEXT NOT NULL, nascimento DATE NOT NULL);"]}})
+(def config {::component.postgresql-mock/postgresql-mock {:components {:config {:postgresql-migrations {:migrations-table :migrations
+                                                                                                        :migrations-path  "migrations"}}}}})
 
 (s/deftest postgresql-mock-component-test
   (let [system (ig/init config)
@@ -26,7 +27,7 @@
              (pg.core/with-connection [conn pool]
                (pg/execute conn
                            "INSERT INTO pessoa (apelido, nome, nascimento) VALUES ($1, $2, $3)
-                            returning *"
+                                                   returning *"
                            {:params ["brunão" "nascimento" now]})))))
 
     (testing "The System was stopped"

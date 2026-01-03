@@ -3,7 +3,16 @@
 All notable changes to this project will be documented in this file. This change log follows the conventions
 of [keepachangelog.com](http://keepachangelog.com/).
 
-## Unreleased
+## 6.2.4 - 2026-01-03
+
+### Added
+
+- Added `pg2-migration` as a new dependency for migration support.
+
+### Changed
+
+- Updated PostgreSQL mock component to use migrations for database setup instead of raw schemas.
+- Bumped versions of multiple dependencies to their latest releases.
 
 ## 5.2.4 - 2025-02-01
 
