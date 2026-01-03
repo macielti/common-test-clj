@@ -9,7 +9,7 @@
   (:import (org.pg Pool)))
 
 (def config {::component.postgresql-mock/postgresql-mock {:components {:config {:postgresql-migrations {:migrations-table :migrations
-                                                                                                        :migrations-path  "resources/migrations"}}}}})
+                                                                                                        :migrations-path  "migrations"}}}}})
 
 (s/deftest postgresql-mock-component-test
   (let [system (ig/init config)
@@ -25,10 +25,10 @@
                :nascimento now
                :nome       "nascimento"}]
              (pg.core/with-connection [conn pool]
-                                      (pg/execute conn
-                                                  "INSERT INTO pessoa (apelido, nome, nascimento) VALUES ($1, $2, $3)
+               (pg/execute conn
+                           "INSERT INTO pessoa (apelido, nome, nascimento) VALUES ($1, $2, $3)
                                                    returning *"
-                                                  {:params ["brunão" "nascimento" now]})))))
+                           {:params ["brunão" "nascimento" now]})))))
 
     (testing "The System was stopped"
       (is (nil? (ig/halt! system))))))

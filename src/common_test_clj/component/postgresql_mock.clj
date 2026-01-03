@@ -3,8 +3,8 @@
             [diehard.core :as dh]
             [integrant.core :as ig]
             [pg.core :as pg]
-            [schema.core :as s]
-            [pg.migration.core :as migrations])
+            [pg.migration.core :as migrations]
+            [schema.core :as s])
   (:import (org.pg.error PGError)
            (org.testcontainers.containers PostgreSQLContainer)))
 
@@ -21,7 +21,7 @@
     (dh/with-retry {:retry-on    PGError
                     :delay-ms    2000
                     :max-retries 3}
-                   (migrations/migrate-all migrations-config))
+      (migrations/migrate-all migrations-config))
     (pg/pool postgresql-config)))
 
 (defmethod ig/halt-key! ::postgresql-mock
@@ -43,5 +43,5 @@
     (dh/with-retry {:retry-on    PGError
                     :delay-ms    2000
                     :max-retries 3}
-                   (migrations/migrate-all migrations-config))
+      (migrations/migrate-all migrations-config))
     (pg/pool postgresql-config)))

@@ -27,7 +27,7 @@
   :profiles {:dev {:plugins        [[com.github.clojure-lsp/lein-clojure-lsp "2.0.13"]
                                     [com.github.liquidz/antq "RELEASE"]]
 
-                   :resource-paths ^:replace ["test/resources"]
+                   :resource-paths ["test/resources"]
 
                    :test-paths     ^:replace ["test/unit" "test/integration" "test/helpers"]
 
