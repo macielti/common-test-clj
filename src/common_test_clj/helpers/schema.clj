@@ -19,8 +19,9 @@
 
 (s/defn generate :- s/Any
   [schema :- s/Any
-   overrides :- (s/pred map?)]
+   overrides :- (s/pred map?)
+   leaf-generators-extension :- (s/pred map?)]
   (c/complete overrides
               schema
               {}
-              leaf-generators))
+              (merge leaf-generators leaf-generators-extension)))

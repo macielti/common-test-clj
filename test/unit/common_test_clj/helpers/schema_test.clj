@@ -22,4 +22,4 @@
                  :date            inst?
                  :local-date-time jt/local-date-time?
                  :local-date      jt/local-date?}
-                (test.helper.schema/generate SchemaTest {:a "a"})))))
+                (test.helper.schema/generate SchemaTest {:a "a"} {})))))
