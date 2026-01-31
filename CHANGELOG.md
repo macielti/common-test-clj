@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file. This change log follows the conventions
 of [keepachangelog.com](http://keepachangelog.com/).
 
+## 7.0.0 - 2026-01-31
+
+### Changed
+
+- Now you are able to provide custom leaf generators.
+
 ## 6.2.4 - 2026-01-03
 
 ### Added
