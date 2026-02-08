@@ -1,4 +1,4 @@
-(defproject net.clojars.macielti/common-test-clj "7.0.0"
+(defproject net.clojars.macielti/common-test-clj "7.0.1"
 
   :description "Common utilities for testing Clojure code"
 
@@ -8,7 +8,7 @@
             :url  "https://www.eclipse.org/legal/epl-2.0/"}
 
   :dependencies [[org.clojure/clojure "1.12.4"]
-                 [net.clojars.macielti/common-clj "44.1.0"]
+                 [net.clojars.macielti/common-clj "44.2.0"]
                  [org.testcontainers/postgresql "1.21.4"]
                  [com.github.igrishaev/pg2-core "0.1.42"]
                  [prismatic/schema-generators "0.1.5"]
@@ -17,7 +17,7 @@
                  [clojure.java-time "1.4.3"]
                  [prismatic/schema "1.4.1"]
                  [integrant "1.0.1"]
-                 [migratus "1.6.4"]
+                 [migratus "1.6.5"]
                  [diehard "0.12.0"]
                  [com.github.igrishaev/pg2-migration "0.1.42"]
 

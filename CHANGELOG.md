@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file. This change log follows the conventions
 of [keepachangelog.com](http://keepachangelog.com/).
 
+## 7.0.1 - 2026-02-08
+
+### Changed
+
+- Changed the schema generation helper functions two make the leaf generators config (overwrite) optional.
+
 ## 7.0.0 - 2026-01-31
 
 ### Changed

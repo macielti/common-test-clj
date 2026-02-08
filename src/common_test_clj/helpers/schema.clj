@@ -18,10 +18,13 @@
    schema.extensions/UuidWire          (test.check.generators/fmap str test.check.generators/uuid)})
 
 (s/defn generate :- s/Any
-  [schema :- s/Any
-   overrides :- (s/pred map?)
-   leaf-generators-extension :- (s/pred map?)]
-  (c/complete overrides
-              schema
-              {}
-              (merge leaf-generators leaf-generators-extension)))
+  ([schema :- s/Any
+    overrides :- (s/pred map?)]
+   (generate schema overrides {}))
+  ([schema :- s/Any
+    overrides :- (s/pred map?)
+    leaf-generators-extension :- (s/pred map?)]
+   (c/complete overrides
+               schema
+               {}
+               (merge leaf-generators leaf-generators-extension))))
