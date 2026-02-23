@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file. This change log follows the conventions
 of [keepachangelog.com](http://keepachangelog.com/).
 
+## 7.0.2 - 2026-02-23
+
+### Added
+
+- Added support to generate schema for `Instant`.
+
 ## 7.0.1 - 2026-02-08
 
 ### Changed
