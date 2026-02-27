@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. This change log follows the conventions
 of [keepachangelog.com](http://keepachangelog.com/).
 
+## 7.1.0 - 2026-02-27
+
+### Added
+
+- Added RabbitMQ Integrant Mock Component for testing RabbitMQ integration with TestContainers.
+- Added RabbitMQ container integration tests demonstrating component initialization and message broker connectivity.
+
 ## 7.0.2 - 2026-02-23
 
 ### Added
