@@ -1,5 +1,5 @@
 (ns rabbitmq-container-test
-  (:require [clojure.test :refer :all]
+  (:require [clojure.test :refer [is testing]]
             [common-test-clj.component.rabbitmq.container :as component.rabbitmq.container]
             [hashp.core]
             [integrant.core :as ig]
