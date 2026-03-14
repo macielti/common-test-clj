@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file. This change log follows the conventions
 of [keepachangelog.com](http://keepachangelog.com/).
 
-## 7.2.0 - 2026-03-14
+## 7.1.1 - 2026-03-14
 
 ### Changed
 
