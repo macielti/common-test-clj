@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. This change log follows the conventions
 of [keepachangelog.com](http://keepachangelog.com/).
 
+## 7.1.1 - 2026-03-14
+
+### Changed
+
+- Improved schema generation: leaf generators for `Instant`, `LocalDateTime`, `LocalDate`, `Date`, `BigDecimal`, and custom wire types now support more flexible and accurate value generation.
+- Refactored `generate` function in `common-test-clj.helpers.schema` for better override and extension handling.
+
 ## 7.1.0 - 2026-02-27
 
 ### Added
