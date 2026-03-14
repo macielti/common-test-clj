@@ -13,7 +13,6 @@
    LocalDateTime                       (test.check.generators/fmap #(jt/local-date-time %) (test.check.generators/choose 2000 2024))
    LocalDate                           (test.check.generators/fmap #(jt/local-date %) (test.check.generators/choose 2000 2024))
    Date                                (test.check.generators/fmap #(jt/java-date %) (test.check.generators/choose 2000 2024))
-   s/Inst                              (test.check.generators/fmap #(jt/java-date %) (test.check.generators/choose 2000 2024))
    BigDecimal                          (test.check.generators/fmap #(bigdec %) (test.check.generators/choose 0 1000))
    schema.extensions/LocalDateWire     (test.check.generators/fmap #(-> (jt/local-date %) str (str/split #"T") first) (test.check.generators/choose 2000 2024))
    schema.extensions/LocalDateTimeWire (test.check.generators/fmap #(-> (jt/local-date-time %) str) (test.check.generators/choose 2000 2024))
